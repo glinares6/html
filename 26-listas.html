@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+    <!-- las listas en html sirven para listar contenido.En funcion del contenido de nuestras lista tenemos 3 tipos de lista 
+
+        ul -> unordered  list : se utiliza cuando en orden de los elementos no influye (lista de la compra)
+
+        ol -> ordened list : se utilizan cuando el orden de los elemetnos es importante (top 10)
+
+        cada elemetos de la lista se representa con la etiqueta <li></li> , tanto en las ul como en las ol
+
+        dl -> definition list : se utiliza para hacer una lista de definiciones(diccionario)
+
+        li list item(elemento de la lista) :elementos dentro de una lista
+
+        se pueden construir listas anidadas en uno de los li otro ul/ol seguún sea necesario
+
+        <ol>
+            <li>
+                HTML
+                <ul>
+                    <li>Estructura</li>
+                    <li>Sintaxis</li>
+                    <li>Etiqueta</li>
+                </ul>
+            </li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ol>
+    -->
+<body>
+    <h1>lista</h1>
+
+    <!-- semantica correcta de un menú -->
+    <nav>
+        <ul>
+            <li><a href="/25-anclas.html#post-1">Post-1</a></li>
+            <li><a href="/25-anclas.html#post-2">Post-2</a></li>
+            <li><a href="/25-anclas.html#post-3">Post-3</a></li>
+            <li><a href="/25-anclas.html#post-4">Post-4</a></li>
+            <li><a href="/25-anclas.html#post-5">Post-5</a></li>
+        </ul>
+    </nav>
+    <!-- listas desordenadas -->
+        <h2>lista de la compra</h2>
+    <ul>
+        <li>Pan</li>
+        <li>Huevo</li>
+        <li>Leche</li>
+    </ul>
+    <!-- lista ordenadas -->
+    <h2>orden de aprendizaje en el desarrollo web</h2>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ol>
+
+    <!-- listas de definición -->
+
+    <h2>el lenguaje para el desarrollo web</h2>
+
+    <!-- termino a definir -->
+    <dl>
+        <!-- descripción  -->
+        <dd>HTML</dd>
+        <dd>Hyper Text Markup Languaje: Es un lenguaje de marcado que se usa para estructuras datos en una pagina web</dd>
+
+    </dl>
+    <dl>
+        <!-- descripción  -->
+        <dd>CSS</dd>
+        <dd>Cascade Style Sheets Es un lenguaje de diseño para dar estilo HTML</dd>
+
+    </dl>
+    <dl>
+        <!-- descripción  -->
+        <dd>JAVASCRIPT</dd>
+        <dd>Es una leguaje de programación para dar interactividad a un sitio web</dd>
+    </dl>
+
+    <!-- atributos de las listas -->
+
+    <!-- 
+        ol-> type->estilo de numeración  (1,A,a,I,i)
+        star:inicio de la secuencia (un número)
+
+        ul-> type Estilos de los items(disc,square,circle)
+                                    disc->circular
+                                    square->cuadrado
+                                    circle->circulo vacio
+    -->
+
+    <h2>atributos de las lists </h2>
+    <ul type="disc">
+        <li >Iten</li>
+        <li>Iten</li>
+        <li>Itens</li>
+    </ul>
+
+    <!-- el tyoe de ol solamente funciona con estos núneros  (1,A,a,I,i) -->
+    <ol type="i" start="7">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li> 
+        <!-- imprime i vii,viii,ix -->
+    </ol>
+</body>
+</html>
