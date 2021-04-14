@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablas</title>
+    <style>
+        table{
+            font-family: sans-serif;
+            border: 1px solid grey;
+            /* comprime los border */
+            border-collapse: collapse;
+            text-align: center;
+            /* cebtro la tabla en medio del DOM */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        th,
+        td{
+            border: 2px solid grey;
+            /* se incrementa el espaciado entre las celdas y el pie de celda */
+            padding: .5rem;
+        }
+
+        tr:nth-child(4) td:nth-child(2){
+            background-color: lightgreen;
+            letter-spacing:90px;
+            /*toma  el contorno de  isquierda en  50px */
+            padding-left: 50px;
+            /* transforma el texto en mayuscula */
+            text-transform: uppercase;
+
+        }
+        /* para seleccionar más de una celda se pone coma
+        nth-chold-> pseudo-clase,selecciona un elemento en base a su posición  en una lista de hermanos
+         */
+        tr:nth-child(6) td:nth-child(2),  tr:nth-child(7) td:nth-child(5){
+            background-color: yellow;
+        }
+        /* toma la primera celda de cada elemento 
+        first-child -> toma la primera celda de cada fila
+        last-child->toma la ultima celda de cada fila 
+        nth-child(n)->toma una celda personalizada de casa fila
+        */
+        td:first-child,
+        th,
+        tfoot{
+            background-color: lightgreen;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--Las tablas en HTML -> sirven para mostrar contenido tabulado
+
+        la estructura basica de una tabla de compone de :
+        table->etiqueta que encierra la tabla 
+        tr-> table row -etiqueta que construye una fila
+        td->  table data -etiqueta qie construye una celda
+        
+        truco :el número de celdas dentro de un tr establecera  el número de columnas de un tabla
+
+        los titulos de la tabla se establecen con la etiqueta caption,es una etiqueta opcional y segun la especificación esta etiqueta se coloca justo después de la etiqueta table
+
+        Las cabeceras de las tablas se establecen con la etiqueta thead
+        Dentro tenemos la etiqueta tr normal, pero en el caso de las celdas ,las estableceremos con las etiquetas th en lugar de las etiquetas td
+
+        El contenido de las tablas debe ir dentro de una etiqueta tbody para representar el cuerpo de una tabla
+
+        De forma opcinal podremos colocar un tfoot a la tabla  para establecer un pie de tabla ,esto es algo que algunas tablas tienen como suma de cantidades o total
+        
+        Para hacer que las celdas ocupen más de una fila o más de una columna tenemos 2 atributos :
+
+        rowspan->sirve para que una celda ocupe más de una fila ,el valor por defecto es 1 
+        colspan-> sirve para que una celda ocupe más de una columna, el valor por defecto es 1
+
+        Cuando necesitamos seleccionar una columna ,tenemos la etiqueta colgroup, que nos permite seleccionar una colunna en concreto.Dentro pondremos tantas etiquetas col como columnas tengamos,siguiendo el mismo orden como tienen en las tablas
+
+        Si necesittamos que una etiqueta col agregue más de una columna ,tenemos el atributo span , que funciona exactamente igual que rowspan y colspan
+    -->
+    <h1>table</h1>
+    <table>
+        <caption value="">HORARIO DE CLASES</caption>
+        <!-- seleccionado una columna  -->
+        <colgroup>
+            <col span="5">
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <!-- Cabecera de la tabla -->
+        <thead>
+            <tr>
+                <!--
+                    En lugar de td es reemplazado por th,(cabecera de celda)  -->
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <!-- cuerpo de la tabla -->
+        <tbody>
+            <tr>
+                <td >8:30 - 9:30</td>
+                <td>Matematicas</td>
+                <td>Matematicas</td>
+                <td>SocialesS</td>
+                <td>Matematicas</td>
+                <td>Matematicas</td>
+            </tr>
+            <tr>
+                <td>9:30 - 10:25</td>
+                <td>lengua</td>
+                <td>lengua</td>
+                <td>Matematicas</td>
+                <td>Ciencia</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <td>19:25 - 11:20</td>
+                <td>Educación fisica</td>
+                <td>Ciencias</td>
+                <td>Lengua</td>
+                <td>Lengua</td>
+                <td>Educación fisica</td>
+            </tr>
+            <tr>
+                <td>11:20 - 11:45</td>
+                <td colspan="5">Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45 - 12:40</td>
+                <td>Ingles</td>
+                <td>Sociales</td>
+                <td>Ingles</td>
+                <td>Tutoria</td>
+                <td>Ingles</td>
+            </tr>
+            <tr>
+                <!-- tecnologia toma las 2 celdas, es decir la celda siguiente;se debe quitar la celda de la fila siguiente para que la tabla no se rompa -->
+
+                <td>12:40 - 13:35</td>
+                <td rowspan="2">Tecnologia</td>
+                <td>Educación fisica</td>
+                <td>Plastica</td>
+                <td>Religión</td>
+                <td>Música</td>
+            </tr>
+            <tr>
+                <!-- se omite la celda tecnologia para evitar que la tabla se rompa -->
+
+                <td>13:35 - 14:30</td>
+                <!-- <td>Tecnologia</td> -->
+                <td>Frances</td>
+                <td>Tecnologia</td>
+                <td>Frances</td>
+                <td rowspan="2">Tecnologia</td>
+            </tr>
+            <!-- tabla columna  -->
+            <tr>
+                <!-- tabla data -> datos de las tablas -->
+                <td>14:30 - 15:10</td>
+                <td>matematicas</td>
+                <td>Lenguaje</td>
+                <td>materia 3</td>
+                <td>materia 3</td>
+                <!-- <td>materia 3</td> -->
+            </tr>
+        </tbody>
+        <!-- pie de la tabla  -->
+        <tfoot>
+            <tr>
+                <td colspan="5" >total de asignaturas</tdcolspan="2">
+                <td >12</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
