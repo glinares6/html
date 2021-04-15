@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        radio->permite seleccionar una unica opción de una lista de opciones relacionadas
+
+        checkbox->permite selleccionar varias opciones de una lista de opcines relacionadas
+
+        select-> crea una lista de opocines donde podemos seleccionar una o varias opciones
+
+        multiple->agregar más de un option dentro del select
+        cada opcion ira dentro  de una etiqueta <option></option>
+
+        Si tenemos muchas opciones podemos ordenarlas por categorias o a través de la etiqueta <optgroup>
+        </optgroup> con el atributo label para nombrar la categoria
+
+        datalist->crea un lista con sus descripciones(opcional),filtra la busqueda de su contenido
+        El atributo list y id deben ser el mismo sino no va reconocer el imput el datalist
+    -->
+    <title>input select avanzado</title>
+</head>
+<body>
+    <h1>elementos seleccionados</h1>
+    <form>
+        <span>lista con busqueda</span>
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro"></option>
+            <option value="gato"></option>
+            <option value="hanster"></option>
+            <option value="conejo"></option>
+            <option value="loro"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="tarantula"></option>
+        </datalist>
+
+        <span>select agrupado</span>
+       <select name="mascotas" >
+           <optgroup label="4 patas">
+               <option value="perro">Perro</option>
+               <option value="gato">Gato</option>
+               <option value="hanster">Hanster</option>
+               <option value="conejo">Conejo</option>
+           </optgroup>
+           <optgroup label="aves">
+               <option value="loro">Loro</option>
+               <option value="canario">Canario</option>
+           </optgroup>
+           <optgroup label="otras">
+               <option value="serpiente">Serpiente</option>
+               <option value="tarantula">Tarantula</option>
+           </optgroup>
+       </select> 
+    </form>
+
+    
+</body>
+</html>

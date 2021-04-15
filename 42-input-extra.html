@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de input</title>
+</head>
+
+    <!--
+        input ->type
+        button-> visualmente es igual pero el formulario no se enviara
+        submit-> se utiliza para enviar el formulario
+        
+        IMPUT DE FECHAS
+        date->se utilizara para introducir una fecha
+        datetime-> obsoleto
+        datetime-local-> fecha y hora no funciona el firefox
+        time-> se utiliza pra introducri una hora
+                TIP
+                    se recomienda usar datetime-local y time para seleccionar fecha y hora
+                    hidden->campos ocultos ,puede contener valor pero  no se mostrara
+        mouth ->se utiliza para introducir un mes
+        week->se utiliza para introducir el número de semana del año
+
+        IMPUT-LABEL PARA MOVILES
+        color->se ttiloza par establexer color
+        email->se utiloza para indroducir un email
+        number->se utiliza para valores numericos
+        password->se utiliza para contraseñas
+        tange->se utiliza pra estabalecer un rango
+        reset->se utilizar para resetear el formulario
+        search->se utiliza para las barras de busqueda
+        tel->se utiliza pra introducir números telefonicos
+        text->valor por defecto
+        url->se utiliza para introducir URLs
+
+    -->
+<body>
+    <form>
+
+            <!-- ETIQUETA TIPO INPUT -->
+
+            <input type="color">
+            <input type="number">
+            <input type="range" step="5" min="0" max="20">
+            <input type="reset">
+            <!-- esusado para el caso de eventos en donde se tenga que mostrar ocultar información -->
+            <!-- <input type="hidden"> -->
+            <input type="text">
+
+    </form> 
+
+
+</body>
+</html>

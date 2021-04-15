@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        radio->permite seleccionar una unica opción de una lista de opciones relacionadas
+
+        checkbox->permite selleccionar varias opciones de una lista de opcines relacionadas
+
+        select-> crea una lista de opocines donde podemos seleccionar una o varias opciones
+
+        cada opcion ira dentro  de una etiqueta <option></option>
+
+        Si tenemos muchas opciones podemos ordenarlas por categorias o a traves de la etiqueta <optgroup>
+        </optgroup> con el atributo label para nombrar la categoria
+    -->
+    <title>input radio</title>
+</head>
+<body>
+    <h1>elementos seleccionados</h1>
+    <form>
+        <h2>genero</h2>
+        <label>Masculino
+            <!--
+                name->engloba un grupo a elementos(gerder)
+                cheked->mantiene en estad activo
+                value->se hace el llamado al servidor por medio de su valor
+            -->
+            <input type="radio" name="gerder" checked value="masculino">
+        </label>
+        <label>Femenino
+            <input type="radio" name="gerder" value="femeninos" >
+        </label>
+        <label>Desconocido
+            <input type="radio" name="gerder" value="desconocidasD">
+        </label>
+    </form>
+
+    
+</body>
+</html>
