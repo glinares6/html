@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get vs post</title>
+</head>
+    <!-- form -> https://developer.mozilla.org/es/docs/Web/HTML/Element/form
+
+        label->https://developer.mozilla.org/es/docs/Web/HTML/Element/label
+
+        input->https://developer.mozilla.org/es/docs/Web/HTML/Element/input
+
+    -->
+    <!--
+        contenido enbedido
+        contenido que nos traemos desde fuera 
+
+        ejemplos:
+        iframes ,audio,video,imagenes
+
+        tipos de imagenes :
+        vectoriales :svg
+        mapa de bits->jpg,png,bits,webp
+
+        convertir imagenes a webp
+        https://imagen.online-convert.com/es/convertir-a-webp
+        documentación
+        https://developers.google.com/speed/webp
+    -->
+<body>
+    <form action="enviar.html" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Apellido</label>
+        <input type="text" id="surname" name="surname">
+        <input type="submit">
+    </form>
+</body>
+</html>
