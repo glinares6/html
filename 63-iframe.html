@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <!-- <style>
+        img{
+            max-width: 100%;
+        }
+    </style> -->
+    <style>
+        video{
+            max-width: 100%;
+        }
+    </style>
+</head>
+    <!--
+        DPR-> (Device pixel ratio)
+        Es la relación que existe entre los pixeles reales  que tiene el dispositivo y los pixeles que tenemos disponibles para" pintar " contenido 
+        DPR = pixeles relaes / pixeles disponibles 
+
+        pagina para controlar tu viewport ->
+        https://whatismyviewport.com/
+    -->
+<body>
+    <h1>contenido enbebido</h1>
+    <!-- <img src="/assets/images/pikachu-jpg.jpg" width="300"
+     alt="contenido enbebido"> -->
+        <!-- <img srcset="
+        /assets/images/html-navegador-web-jpg.webp,
+        /assets/images/html-navegador-web-jpg.jpg, 
+        /assets/images/html-navegador-movil-webp.webp 2x
+        /assets/images/html-navegador-movil-jpg.jpg 2x" src="/assets/images/html-navegador-web-jpg.jpg" alt="imagen de portada"> -->
+
+        <picture>
+            <!-- <source srcset="
+            /assets/images/html-navegador-movil-webp.webp, /assets/images/html-navegador-movil-jpg.jpg" media="(max-width:1200px)">
+            <img src="/assets/images/html-navegador-web-jpg.jpg" alt=""> -->
+        </picture>
+        <!--
+            para reproducr de manera automatica en el navegador se recomineda mutear el audio(modo producción)
+            controls->menú navegador de audio
+            autoplay->reproduccion automatica
+            muted->silenciar
+        -->
+        <!-- <audio src="/assets/audio/music-1.mp3" controls autoplay muted ></audio> 
+        -->
+        <!-- loop->ciclo repetitivo del video
+            poster->miniatura del video
+        -->
+        <!-- <video src="/assets/video/video-1.webm" controls autoplay  muted loop poster="/assets/images/html-navegador-web-jpg.jpg"></video> -->
+
+        <!-- 
+            iframe->para traer contenido externo (se recomiendsa tener los archivos enbebidos en el servidor)
+        -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Pr6gmNO8GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+</body>
+</html>

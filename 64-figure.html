@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <!-- <style>
+        img{
+            max-width: 100%;
+        }
+    </style> -->
+    <style>
+        video{
+            max-width: 100%;
+        }
+    </style>
+</head>
+    <!--
+        DPR-> (Device pixel ratio)
+        Es la relación que existe entre los pixeles reales  que tiene el dispositivo y los pixeles que tenemos disponibles para" pintar " contenido 
+        DPR = pixeles relaes / pixeles disponibles 
+
+        pagina para controlar tu viewport ->
+        https://whatismyviewport.com/
+    -->
+<body>
+    <h1>contenido enbebido</h1>
+    <!-- <img src="/assets/images/pikachu-jpg.jpg" width="300"
+     alt="contenido enbebido"> -->
+        <!-- <img srcset="
+        /assets/images/html-navegador-web-jpg.webp,
+        /assets/images/html-navegador-web-jpg.jpg, 
+        /assets/images/html-navegador-movil-webp.webp 2x
+        /assets/images/html-navegador-movil-jpg.jpg 2x" src="/assets/images/html-navegador-web-jpg.jpg" alt="imagen de portada"> -->
+
+        <picture>
+            <!-- <source srcset="
+            /assets/images/html-navegador-movil-webp.webp, /assets/images/html-navegador-movil-jpg.jpg" media="(max-width:1200px)">
+            <img src="/assets/images/html-navegador-web-jpg.jpg" alt=""> -->
+        </picture>
+        <!--
+            para reproducr de manera automatica en el navegador se recomineda mutear el audio(modo producción)
+            controls->menú navegador de audio
+            autoplay->reproduccion automatica
+            muted->silenciar
+        -->
+        <!-- <audio src="/assets/audio/music-1.mp3" controls autoplay muted ></audio> 
+        -->
+        <!-- loop->ciclo repetitivo del video
+            poster->miniatura del video
+        -->
+        <!-- <video src="/assets/video/video-1.webm" controls autoplay  muted loop poster="/assets/images/html-navegador-web-jpg.jpg"></video> -->
+
+        <!-- 
+            iframe->para traer contenido externo (se recomiendsa tener los archivos enbebidos en el servidor)
+        -->
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/6Pr6gmNO8GA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyros cope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- 
+            figure->contenido que hace referencia al contexto,pero no es el mismo autor o propiedad(no es necesaroi para la interpretación del articulo)  
+
+            figcaption->(pie de foto) - sirve tanto para tabla, grafico, fragmento de codigo, cita(contenido opcional relaionado)
+        
+        -->
+
+        <h1>gato</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos hic accusantium dolores, accusamus illo optio a facilis quos, illum ut numquam, obcaecati reprehenderit alias. Harum deserunt sed corrupti assumenda!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse unde quidem et aspernatur modi quis corrupti eum, veniam facilis omnis nulla delectus asperiores qui quam eveniet tempore similique est!</p>
+
+        <figure>
+            <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2019/04/02/5fa523c44bc98.jpeg" alt="gato mirando">
+            <figcaption>gato común mirando</figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quo eligendi repellat necessitatibus cum ipsum? Sint tenetur rem repellat, laborum placeat quia neque eius consequatur porro modi. Nulla, eaque minima?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iusto odit quae hic minima, aspernatur libero totam. Quos, odio. Natus eaque aperiam ipsam, itaque est mollitia nesciunt eos pariatur veritatis!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas dolores pariatur, vel ab praesentium quod, deleniti ipsam delectus esse beatae, ex accusamus inventore quibusdam corrupti nemo repellat est harum ducimus!</p>
+</body>
+</html>
